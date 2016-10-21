@@ -1,4 +1,6 @@
-package org.yyf.algorithm;
+package org.yyf.algorithm.sort;
+
+import org.yyf.algorithm.Constants;
 
 import java.util.Arrays;
 
