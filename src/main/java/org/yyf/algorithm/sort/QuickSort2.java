@@ -44,12 +44,12 @@ public class QuickSort2 {
         int l = leftIndex;
         int r = rightIndex;
         int pivot = src[leftIndex];//左边第一个数作为基准数
-        while (l < r) {
-            while (l < r && src[r] >= pivot) {
+        while (l < r) {//这是中间的一轮循环，将左右２边分别有序
+            while (l < r && src[r] >= pivot) {//因为基准数为左边第一个数，所以先从右边找
                 r--;
             }
-            if (l < r) {
-                src[l++] = src[r];
+            if (l < r) {//这个判断条件是必要的，防止出现l=r＆＆src[l]=src[r]时，死循环
+                src[l++] = src[r];//找到后将右边比基准数小的数放到左边坑的位置（第一次的坑就是基准数的位置）
             }
             while (l < r && src[l] <= pivot) {
                 l++;
@@ -58,9 +58,9 @@ public class QuickSort2 {
                 src[r--] = src[l];
             }
         }
-        src[l] = pivot;
-        quickSort2(leftIndex, l - 1, src);
-        quickSort2(l + 1, rightIndex, src);
+        src[l] = pivot;//最后l==r,将一开始的基准数插入此位置，则左右２边，大小有序。
+        quickSort2(leftIndex, l - 1, src);//再递归排序左边
+        quickSort2(l + 1, rightIndex, src);//排序右边
 
     }
 }
