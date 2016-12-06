@@ -1,4 +1,6 @@
-package org.yyf.algorithm.linkedList.domain;
+package org.yyf.algorithm.linkedList;
+
+import org.yyf.algorithm.linkedList.domain.Node;
 
 /**
  * Created by tobi on 2016/11/25.
