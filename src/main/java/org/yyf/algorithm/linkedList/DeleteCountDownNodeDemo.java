@@ -1,6 +1,5 @@
 package org.yyf.algorithm.linkedList;
 
-import org.junit.internal.Throwables;
 import org.yyf.algorithm.linkedList.domain.Node;
 
 import java.util.Objects;
