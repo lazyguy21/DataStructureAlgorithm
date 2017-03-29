@@ -1,6 +1,7 @@
 package org.yyf.algorithm.tree;
 
 import java.util.AbstractCollection;
+import java.util.LinkedList;
 import java.util.Objects;
 
 public class BinaryTree<T> {
@@ -61,6 +62,25 @@ public class BinaryTree<T> {
         }
     }
 
+    public void preOrderUnrecur(Node<T> root){
+        if(root!=null){
+            LinkedList<Node<T>> stack = new LinkedList<>();
+            stack.push(root);
+            while (!stack.isEmpty()){
+                Node<T> head = stack.pop();
+                System.out.print(head.getElement());
+                if(head.getRchild()!=null){
+                    stack.push(head.getRchild());
+                }
+                if(head.getLchild()!=null){
+                    stack.push(head.getLchild());
+                }
+            }
+        }
+        System.out.println();
+
+    }
+
     /**
      * 中序遍历
      * @param root
@@ -105,5 +125,7 @@ public class BinaryTree<T> {
         binaryTree.midOrder(binaryTree.root);
         System.out.println();
         binaryTree.postOrder(binaryTree.root);
+        System.out.println();
+        binaryTree.preOrderUnrecur(binaryTree.root);
     }
 }

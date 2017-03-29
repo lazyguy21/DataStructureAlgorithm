@@ -17,7 +17,7 @@ public class BubbleSort {
     public static void main(String[] args) {
         int[] disorderArray = Constants.DISORDER_ARRAY;
         for (int i = 0; i <disorderArray.length-1; i++) {//这里的i其实代表的是每轮循环后面不需要比较的位置数
-            for (int j = 0; j < disorderArray.length-1-i; j++) {
+            for (int j = 0; j < disorderArray.length-1-i; j++) {//这个循环完成一轮，代表着一个无序数列中的"最大数"被冒泡到数列的尾部，具体的位置就是disorderArray.length-1-i
                 if(disorderArray[j]>disorderArray[j+1]){//如果前一个位置的数大于后一个位置，则交换
                     int temp = disorderArray[j];
                     disorderArray[j] = disorderArray[j + 1];
