@@ -48,7 +48,7 @@ public class QuickSort2 {
             while (l < r && src[r] >= pivot) {//因为基准数为左边第一个数，所以先从右边找
                 r--;
             }
-            if (l < r) {//这个判断条件是必要的，防止出现l=r＆＆src[l]=src[r]时，死循环
+            if (l < r) {//这个判断条件是必要的，当l==r时，如果执行了下面代码之后，l++就会指向错误的位置
                 src[l++] = src[r];//找到后将右边比基准数小的数放到左边坑的位置（第一次的坑就是基准数的位置）
             }
             while (l < r && src[l] <= pivot) {

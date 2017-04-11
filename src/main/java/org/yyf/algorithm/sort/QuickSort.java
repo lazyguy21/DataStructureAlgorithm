@@ -24,18 +24,18 @@ public class QuickSort {
             while (r > l && s[r] >= pivot) {
                 r--;
             }
-            if (r > l) {
+//            if (r > l) {
                 s[l] = s[r];
                 l++;
-            }
+//            }
 
             while (r > l && s[l] <= pivot) {
                 l++;
             }
-            if (r > l) {
+//            if (r > l) {
                 s[r] = s[l];
                 r--;
-            }
+//            }
         }
         s[l] = pivot;
         quickSort(s,left,l-1);

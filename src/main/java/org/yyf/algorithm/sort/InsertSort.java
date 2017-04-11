@@ -12,10 +12,17 @@ import java.util.Arrays;
  */
 public class InsertSort extends Base {
     public static void main(String[] args) {
+//        for (int i = 1; i < LENGTH; i++) {
+//            while (i > 0 && DISORDER_ARRAY[i] < DISORDER_ARRAY[i - 1]) {
+//                exchange(DISORDER_ARRAY, i, i - 1);
+//                i--;
+//            }
+//
+//        }
+//        show();
         for (int i = 1; i < LENGTH; i++) {
-            while (i > 0 && DISORDER_ARRAY[i] < DISORDER_ARRAY[i - 1]) {
-                exchange(DISORDER_ARRAY, i, i - 1);
-                i--;
+            for (int j = i; j >0&&DISORDER_ARRAY[j]<DISORDER_ARRAY[j-1] ; j--) {
+                exchange(DISORDER_ARRAY,j,j-1);
             }
 
         }

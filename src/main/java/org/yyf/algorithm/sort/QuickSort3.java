@@ -21,7 +21,7 @@ public class QuickSort3 {
         int leftIndex = startIndex;
         int rightIndex = endIndex;
 
-        while (leftIndex<rightIndex){
+        while (leftIndex<rightIndex){//递归到最后，leftindex会等于rightindex
             while (leftIndex < rightIndex && srcArr[rightIndex] >= pivot) {
                 rightIndex--;
             }
