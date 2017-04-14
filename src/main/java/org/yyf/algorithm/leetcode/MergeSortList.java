@@ -33,10 +33,10 @@ public class MergeSortList {
         //递归排序左右2个链表，返回左右链表头
         ListNode leftNode = sortList(head);
         ListNode rightNode = sortList(slow);
+
+        //合并
         ListNode dummyNode = new ListNode(0);
         ListNode ptr = dummyNode;
-        //合并
-
         while (leftNode!=null&&rightNode!=null){
             if (leftNode.val <= rightNode.val) {
                 ptr.next = leftNode;
